@@ -1,23 +1,35 @@
-<h1>Editar herói</h1>
-    <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
-      <input type="hidden" id="id" name="id" formControlName="id" />
-      <label for="name">Nome: </label>
-      <input
-        id="name"
-        type="text"
-        placeholder="Nome"
-        aria-label="Nome"
-        formControlName="name"
-        required
-      />
-      <label for="description">Descrição: </label>
-      <textarea
-        id="description"
-        placeholder="Descrição"
-        aria-label="Descrição"
-        formControlName="description"
-        required
-      >
-      </textarea>
-      <button type="submit" [disabled]="!heroForm.valid">Enviar</button>
+<div class="container">
+  
+  <h1 class="h1 text-center">Editar herói</h1>
+    
+  <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <input type="hidden" id="id" name="id" formControlName="id" />
+        <label class="form-label" for="name">Nome: </label>
+        <input
+          class="form-control"
+          id="name"
+          type="text"
+          placeholder="Nome"
+          aria-label="Nome"
+          formControlName="name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Descrição: </label>
+        <textarea
+          class="form-control"
+          id="description"
+          placeholder="Descrição"
+          aria-label="Descrição"
+          formControlName="description"
+          required
+        >
+        </textarea>
+      </div>
+      
+      <button class="btn btn-outline-success" type="submit" [disabled]="!heroForm.valid">Enviar</button>
     </form>
+</div>
+

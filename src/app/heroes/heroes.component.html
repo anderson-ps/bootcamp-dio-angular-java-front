@@ -1,14 +1,17 @@
-<h1>Heróis</h1>
+<div class="container">
+  <h1 class="h1 text-center my-3">Heróis</h1>
+  
+  <button class="btn btn-primary my-3" routerLink="hero" type="button">Novo herói</button>
+  
+  <table role="grid" class="table">
+      <tbody>
+        <tr *ngFor="let hero of heroes$ | async">
+          <th scope="row">{{ hero.name }}</th>
+          <td>{{ hero.description }}</td>
+          <td><button class="btn btn-success" [routerLink]="['hero', hero.id]">Editar</button></td>
+          <td><button class="btn btn-danger" (click)="deleteHero(hero)">Excluir</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
 
-<a routerLink="hero">Novo herói</a>
-
-<table role="grid">
-    <tbody>
-      <tr *ngFor="let hero of heroes$ | async">
-        <th scope="row">{{ hero.name }}</th>
-        <td>{{ hero.description }}</td>
-        <td><a [routerLink]="['hero', hero.id]">Editar</a></td>
-        <td><a (click)="deleteHero(hero)">Excluir</a></td>
-      </tr>
-    </tbody>
-  </table>

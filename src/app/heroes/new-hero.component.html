@@ -1,24 +1,36 @@
-<h1>Novo herói</h1>
-    <form [formGroup]="newHeroForm" (ngSubmit)="onSubmit()">
-      <label for="name">Nome: </label>
-      <input
-        id="name"
-        type="text"
-        placeholder="Nome"
-        aria-label="Nome"
-        formControlName="name"
-        required
+<div class="container">
+  
+  <h1 class="h1 text-center">Novo herói</h1>
+    
+  <form [formGroup]="newHeroForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label" for="name">Nome: </label>
+        <input
+          class="form-control"
+          id="name"
+          type="text"
+          placeholder="Nome"
+          aria-label="Nome"
+          formControlName="name"
+          required
       />
-      <label for="description">Descrição: </label>
-      <textarea
-        id="description"
-        placeholder="Descrição"
-        aria-label="Descrição"
-        formControlName="description"
-        required
-      >
-      </textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Descrição: </label>
+        <textarea
+          class="form-control"
+          id="description"
+          placeholder="Descrição"
+          aria-label="Descrição"
+          formControlName="description"
+          required
+        >
+        </textarea>
+      </div>
+    
       <p>Preencha os campos para inserir.</p>
       
-      <button type="submit" [disabled]="!newHeroForm.valid">Enviar</button>
+      <button class="btn btn-outline-success" type="submit" [disabled]="!newHeroForm.valid">Enviar</button>
     </form>
+</div>
+

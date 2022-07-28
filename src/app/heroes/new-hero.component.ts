@@ -8,8 +8,7 @@ import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new-hero',
-  templateUrl: './new-hero.component.html',
-  styleUrls: ['./new-hero.component.css']
+  templateUrl: './new-hero.component.html'
 })
 
 

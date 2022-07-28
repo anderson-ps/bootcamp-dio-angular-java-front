@@ -5,8 +5,7 @@ import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  templateUrl: './heroes.component.html'
 })
 export class HeroesComponent implements OnInit {
   public heroes$ = this.service.heroes;

@@ -10,8 +10,7 @@ import { HeroesService } from './heroes.service';
 
 @Component({
   selector: 'app-edit-hero',
-  templateUrl: './edit-hero.component.html',
-  styleUrls: ['./edit-hero.component.css']
+  templateUrl: './edit-hero.component.html'
 })
 
 
