@@ -1,0 +1,23 @@
+<h1>Editar herói</h1>
+    <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+      <input type="hidden" id="id" name="id" formControlName="id" />
+      <label for="name">Nome: </label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Nome"
+        aria-label="Nome"
+        formControlName="name"
+        required
+      />
+      <label for="description">Descrição: </label>
+      <textarea
+        id="description"
+        placeholder="Descrição"
+        aria-label="Descrição"
+        formControlName="description"
+        required
+      >
+      </textarea>
+      <button type="submit" [disabled]="!heroForm.valid">Enviar</button>
+    </form>

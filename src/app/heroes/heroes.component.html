@@ -1,0 +1,14 @@
+<h1>Heróis</h1>
+
+<a routerLink="hero">Novo herói</a>
+
+<table role="grid">
+    <tbody>
+      <tr *ngFor="let hero of heroes$ | async">
+        <th scope="row">{{ hero.name }}</th>
+        <td>{{ hero.description }}</td>
+        <td><a [routerLink]="['hero', hero.id]">Editar</a></td>
+        <td><a (click)="deleteHero(hero)">Excluir</a></td>
+      </tr>
+    </tbody>
+  </table>
